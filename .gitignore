@@ -36,3 +36,4 @@ coverage/
 
 # Workspace file from VS Code
 portfolio.code-workspace
+.output
