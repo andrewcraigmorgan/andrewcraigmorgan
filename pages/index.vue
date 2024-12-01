@@ -9,7 +9,7 @@
                     <a href="https://github.com/andrewcraigmorgan" target="_blank" aria-label="GitHub">
                         <i class="fab fa-github"></i>
                     </a>
-                    <a href="https://www.linkedin.com/in/andrew-morgan-7671171b/" target="_blank" aria-label="LinkedIn">
+                    <a href="https://www.linkedin.com/in/andrew-craig-morgan/" target="_blank" aria-label="LinkedIn">
                         <i class="fab fa-linkedin"></i>
                     </a>
                 </div>
