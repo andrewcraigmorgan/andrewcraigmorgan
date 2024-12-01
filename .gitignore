@@ -1,0 +1,38 @@
+# Node modules
+node_modules/
+
+# Nuxt build directories
+.nuxt/
+dist/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Local environment files
+.env
+.env.local
+.env.*.local
+
+# OS-specific files
+.DS_Store
+Thumbs.db
+
+# IDE and editor files
+.vscode/
+.idea/
+
+# Package lock files (optional)
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Test coverage
+coverage/
+
+# Next.js specific files (if applicable)
+.next/
+
+# Workspace file from VS Code
+portfolio.code-workspace
