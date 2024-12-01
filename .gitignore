@@ -36,3 +36,6 @@ coverage/
 
 # Workspace file from VS Code
 portfolio.code-workspace
+
+# Ignore output folder of GitHub
+.output
