@@ -6,6 +6,6 @@ export default defineNuxtConfig({
     devtools: { enabled: true },
     css: ["@/assets/css/fonts.css"],
     app: {
-        baseURL: "/andrewcraigmorgan/",
+        baseURL: "/andrewcraigmorgan",
     },
 });

@@ -1,22 +1,22 @@
 {
-  "name": "nuxt-app",
-  "private": true,
-  "type": "module",
-  "scripts": {
-    "build": "nuxt build",
-    "dev": "nuxt dev",
-    "generate": "nuxt generate",
-    "preview": "nuxt preview",
-    "postinstall": "nuxt prepare",
-    "deploy": "nuxt generate && gh-pages -d dist"
-  },
-  "dependencies": {
-    "gh-pages": "^6.2.0",
-    "nuxt": "^3.14.1592",
-    "vue": "latest",
-    "vue-router": "latest"
-  },
-  "devDependencies": {
-    "less": "^4.2.1"
-  }
+    "name": "nuxt-app",
+    "private": true,
+    "type": "module",
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev",
+        "generate": "nuxt generate",
+        "preview": "nuxt preview",
+        "postinstall": "nuxt prepare",
+        "deploy": "nuxt generate && gh-pages -d dist --dotfiles"
+    },
+    "dependencies": {
+        "gh-pages": "^6.2.0",
+        "nuxt": "^3.14.1592",
+        "vue": "latest",
+        "vue-router": "latest"
+    },
+    "devDependencies": {
+        "less": "^4.2.1"
+    }
 }
