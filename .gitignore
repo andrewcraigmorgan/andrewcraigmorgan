@@ -1,9 +1,9 @@
 # Node modules
-node_modules/
+node_modules
 
 # Nuxt build directories
-/.nuxt
-/dist
+.nuxt
+dist
 
 # Logs
 npm-debug.log*
@@ -20,8 +20,8 @@ yarn-error.log*
 Thumbs.db
 
 # IDE and editor files
-.vscode/
-.idea/
+.vscode
+.idea
 
 # Package lock files (optional)
 package-lock.json
@@ -29,10 +29,10 @@ yarn.lock
 pnpm-lock.yaml
 
 # Test coverage
-coverage/
+coverage
 
 # Next.js specific files (if applicable)
-.next/
+.next
 
 # Workspace file from VS Code
 portfolio.code-workspace
