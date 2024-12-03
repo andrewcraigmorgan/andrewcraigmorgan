@@ -2,8 +2,8 @@
 node_modules/
 
 # Nuxt build directories
-.nuxt/
-dist/
+/.nuxt
+/dist
 
 # Logs
 npm-debug.log*
