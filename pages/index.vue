@@ -19,8 +19,16 @@
     </div>
 </template>
 
-<script>
-export default {};
+<script setup>
+useHead({
+    title: "Andrew Morgan - Transforming ideas into practical digital solutions",
+    meta: [
+        {
+            name: "description",
+            content: "Andrew Morgan's portfolio showcasing his experience in PHP and JavaScript based web development.",
+        },
+    ],
+});
 </script>
 
 <style lang="less">
