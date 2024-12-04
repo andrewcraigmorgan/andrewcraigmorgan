@@ -5,14 +5,7 @@
             <div class="content">
                 <h1>Andrew Morgan</h1>
                 <p>Transforming ideas into practical digital solutions.</p>
-                <div class="social-icons">
-                    <a href="https://github.com/andrewcraigmorgan" target="_blank" aria-label="GitHub">
-                        <i class="fab fa-github"></i>
-                    </a>
-                    <a href="https://www.linkedin.com/in/andrew-craig-morgan/" target="_blank" aria-label="LinkedIn">
-                        <i class="fab fa-linkedin"></i>
-                    </a>
-                </div>
+                <SocialIcon />
             </div>
         </main>
         <footer></footer>
@@ -20,6 +13,8 @@
 </template>
 
 <script setup>
+import SocialIcon from "@/components/SocialIcon.vue";
+
 useHead({
     title: "Andrew Morgan - Transforming ideas into practical digital solutions",
     meta: [
