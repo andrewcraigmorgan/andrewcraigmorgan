@@ -1,14 +1,12 @@
 <template>
-    <div class="portfolio-container">
-        <header></header>
+    <div v-cloak>
         <main>
-            <div class="content">
-                <h1>Andrew Morgan</h1>
-                <p>Transforming ideas into practical digital solutions.</p>
+            <div class="portfolio">
+                <h1 class="portfolio__title">Andrew Morgan</h1>
+                <p class="portfolio__subtitle">Transforming ideas into practical digital solutions.</p>
                 <SocialIcon />
             </div>
         </main>
-        <footer></footer>
     </div>
 </template>
 
@@ -27,41 +25,31 @@ useHead({
 </script>
 
 <style lang="less">
-@import url("https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css");
-
-body {
-    margin: 0;
-    font-family: "Barlow", sans-serif;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-    background-color: teal;
-    color: white;
-    text-align: center;
-}
-
-.portfolio-container {
+.portfolio {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
     height: 100%;
     width: 100%;
-}
+    color: var(--lightTextColour);
+    padding: 20px;
 
-.content {
-    h1 {
-        font-size: 3rem;
-        margin: 0;
+    &__title {
+        font-size: 35px;
+        margin: 0 0 10px;
+        padding: 0;
+
+        @media @mobile {
+            font-size: 25px;
+        }
     }
 
-    p {
-        font-size: 1.5rem;
-        margin: 0.5rem 0 1.5rem;
+    &__subtitle {
+        font-size: 20px;
     }
 
-    .social-icons {
+    &__social-icons {
         display: flex;
         gap: 1.5rem;
         margin-top: 1rem;

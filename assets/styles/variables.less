@@ -1,0 +1,64 @@
+// Widths
+@wrapperWidth: 1360px;
+@mobileWidth: 640px;
+
+// Media Query Breakpoints
+@desktop: ~"all and (min-width: "(@wrapperWidth + 20) ~ ")";
+@tablet: ~"all and (min-width: "(@mobileWidth + 1) ~ ") and (max-width: "(@wrapperWidth + 19) ~ ")";
+@mobile: ~"all and (max-width: @{mobileWidth})";
+
+@primaryColour: #2f353f;
+@secondaryColour: #4ed2b5;
+@tertiaryColour: #e85d75;
+@successColour: #3f8828;
+@informationColour: #f1c40f;
+@warningColour: #f0ae49;
+@errorColour: #e74c3c;
+
+:root {
+    // Widths
+    --wrapperWidth: @wrapperWidth;
+    --mobileWidth: @mobileWidth;
+
+    --baseLetterSpacing: normal;
+    --baseFontSize: 16;
+
+    // Fonts
+    --primaryFont: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    --bodyFont: 'Inter', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+
+    // Borders
+    --borderRadius: 5px;
+    --borderColour: #2f353f;
+
+    // Brand colours
+    --primaryColour: @primaryColour;
+    --secondaryColour: @secondaryColour;
+    --tertiaryColour: @tertiaryColour;
+    --successColour: @successColour;
+    --informationColour: @informationColour;
+    --warningColour: @warningColour;
+    --errorColour: @errorColour;
+
+    // Typography
+    --textColour: #2f353f;
+    --subTextColour: #7a7e84;
+    --disabledColour: #acaeb2;
+    --lightTextColour: #ffffff;
+}
+
+.dark-mode {
+    // typography
+    --textColour: #ffffff;
+    --subTextColour: #7a7e84;
+    --disabledColour: #acaeb2;
+    --lightTextColour: #000;
+
+    // layers
+    --layerDarkColour: #ffffff;
+    --layerAccentColour: #21201f;
+    --layerLightColour: #0a0a08;
+    --layerWhiteColour: #000000;
+    --layerOverlayColour: rgba(0, 0, 0, 0.4);
+    --darkSectionBgColour: #3f444a;
+}
