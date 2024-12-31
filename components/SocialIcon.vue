@@ -25,12 +25,13 @@ const linkedinLink = "https://www.linkedin.com/in/andrew-craig-morgan/";
 <style scoped lang="less">
 .social-icons {
     display: flex;
-    gap: 1.5rem;
-    margin-top: 1rem;
+    align-items: center;
+    gap: 20px;
     justify-content: center;
+    margin: 0;
 
     path {
-        fill: #fff;
+        fill: var(--text-color);
     }
 }
 

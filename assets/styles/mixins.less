@@ -1,0 +1,20 @@
+.wrapper() {
+    max-width: var(--wrapperWidth);
+    margin: 0 auto;
+
+    @media @mobile, @tablet {
+        padding: 0 20px;
+    }
+}
+
+.outline(@colour: currentColor, @offset: 0, @important: false) {
+    outline-offset: @offset;
+
+    & when (@important =false) {
+        outline: 2px solid @colour;
+    }
+
+    & when (@important =true) {
+        outline: 2px solid @colour !important;
+    }
+}

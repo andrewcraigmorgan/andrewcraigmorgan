@@ -32,7 +32,8 @@ export default defineNuxtConfig({
 
     googleFonts: {
         families: {
-            Inter: [200, 400],
+            "Open+Sans": [200, 400],
+            Oxygen: [400],
         },
         display: "swap",
         prefetch: true,

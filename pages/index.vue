@@ -1,11 +1,9 @@
 <template>
     <div v-cloak>
         <main>
-            <div class="portfolio">
-                <h1 class="portfolio__title">Andrew Morgan</h1>
-                <p class="portfolio__subtitle">Transforming ideas into practical digital solutions.</p>
-                <SocialIcon />
-            </div>
+            <HeaderAbout />
+            <BrandGrid />
+            <PortfolioImages />
         </main>
     </div>
 </template>
@@ -14,11 +12,12 @@
 import SocialIcon from "@/components/SocialIcon.vue";
 
 useHead({
-    title: "Andrew Morgan - Transforming ideas into practical digital solutions",
+    title: "Andrew Morgan - PHP and JavaScript Developer based in Dundee, Scotland",
     meta: [
         {
             name: "description",
-            content: "Andrew Morgan's portfolio showcasing his experience in PHP and JavaScript based web development.",
+            content:
+                "Andrew Morgan's portfolio showcasing his experience with PHP and JavaScript based web development.",
         },
     ],
 });
