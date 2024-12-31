@@ -3,7 +3,6 @@
         <main>
             <HeaderAbout />
             <BrandGrid />
-            <PortfolioImages />
             <Testimonial />
         </main>
     </div>
