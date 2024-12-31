@@ -22,10 +22,20 @@ export default defineNuxtConfig({
                 less: {
                     additionalData: `
                         @import "@/assets/styles/variables.less";
-                        @import "@/assets/styles/fonts.less";
+                        @import "@/assets/styles/mixins.less";
                     `,
                 },
             },
         },
+    },
+    modules: ["@nuxtjs/google-fonts"],
+
+    googleFonts: {
+        families: {
+            Inter: [200, 400],
+        },
+        display: "swap",
+        prefetch: true,
+        preconnect: true,
     },
 });
