@@ -4,6 +4,7 @@
             <HeaderAbout />
             <BrandGrid />
             <PortfolioImages />
+            <Testimonial />
         </main>
     </div>
 </template>

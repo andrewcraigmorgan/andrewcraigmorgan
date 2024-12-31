@@ -1,38 +1,61 @@
 <template>
-    <div class="brandsGrid">
-        <div class="brandItem" v-for="(brand, index) in brands" :key="index">
-            <img :src="brand.logo" :alt="brand.name" />
+    <div class="brandsGridWrapper">
+        <div class="brandsGrid">
+            <div class="brandItem" v-for="(brand, index) in brands" :key="index">
+                <img :src="brand.logo" :alt="brand.name" />
+            </div>
         </div>
     </div>
 </template>
 
 <script setup>
 const brands = [
-    { logo: "/images/brand_images/vue.svg", name: "Vue" },
-    { logo: "/images/brand_images/wordpress.svg", name: "WordPress" },
-    { logo: "/images/brand_images/php.svg", name: "PHP" },
-    { logo: "/images/brand_images/javascript.svg", name: "JavaScript" },
-    { logo: "/images/brand_images/laravel.svg", name: "Laravel" },
-    { logo: "/images/brand_images/nuxt.svg", name: "Nuxt" },
+    { logo: "/brand-images/php.svg", name: "PHP" },
+    { logo: "/brand-images/javascript.svg", name: "JavaScript" },
+    { logo: "/brand-images/vue.svg", name: "Vue" },
+    { logo: "/brand-images/nuxt.svg", name: "Nuxt" },
+    { logo: "/brand-images/react.svg", name: "React" },
+    { logo: "/brand-images/wordpress.svg", name: "WordPress" },
+    { logo: "/brand-images/laravel.svg", name: "Laravel" },
+    { logo: "/brand-images/next.svg", name: "Next.js" },
 ];
 </script>
 
 <style lang="less">
-.brandsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-    gap: 20px;
-    padding: 20px;
-}
+.brandsGridWrapper {
+    background: #f9f9f9;
+    padding: 100px 0;
 
-.brandItem {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    .brandsGrid {
+        .wrapper;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(40px, 1fr));
+        gap: 40px;
 
-    img {
-        max-width: 100%;
-        max-height: 100%;
+        .brandItem {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            img {
+                max-width: 100px;
+                max-height: 100%;
+            }
+        }
+    }
+
+    @media @mobile {
+        .brandsGrid {
+            grid-template-columns: repeat(auto-fit, minmax(60px, 1fr));
+            gap: 20px;
+
+            .brandItem {
+                img {
+                    max-width: 60px;
+                    max-height: 60px;
+                }
+            }
+        }
     }
 }
 </style>

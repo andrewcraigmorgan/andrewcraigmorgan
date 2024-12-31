@@ -3,7 +3,7 @@
         <div class="testimonialContent">
             <p class="testimonialText">"{{ testimonial.text }}"</p>
             <div class="testimonialAuthor">
-                <img :src="testimonial.photo" :alt="testimonial.name" class="authorPhoto" />
+                <img v-if="testimonial.photo" :src="testimonial.photo" :alt="testimonial.name" class="authorPhoto" />
                 <div class="authorDetails">
                     <span class="authorName">{{ testimonial.name }}</span>
                     <span class="authorPosition">{{ testimonial.position }}</span>
@@ -15,10 +15,10 @@
 
 <script setup>
 const testimonial = {
-    text: "This is the best service I have ever used. Highly recommended!",
-    name: "John Doe",
-    position: "CEO, Example Corp",
-    photo: "https://via.placeholder.com/80x80",
+    text: "From my start day at this company, I've seen this person being called on for guidance, assistance, help.  People call for technical help and he answers.  I've seen people and teams breathe easier when things have gotten tight and he comes to help out.",
+    name: "mtc. Star Awards",
+    position: "",
+    photo: "",
 };
 </script>
 
@@ -27,55 +27,58 @@ const testimonial = {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #fff;
     border-radius: 10px;
-    padding: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    max-width: 600px;
+    padding: 100px 50px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
-}
+    background: #f5f5f5;
 
-.testimonialContent {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-}
+    .testimonialContent {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 15px;
+        max-width: 700px;
+    }
 
-.testimonialText {
-    font-size: 1.2rem;
-    color: #333;
-    font-style: italic;
-    margin: 0;
-}
+    .testimonialText {
+        font-size: 27px;
+        color: #333;
+        font-style: italic;
+        margin: 0;
 
-.testimonialAuthor {
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
+        @media @mobile {
+            font-size: 20px;
+        }
+    }
 
-.authorPhoto {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 2px solid #ddd;
-}
+    .testimonialAuthor {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+    }
 
-.authorDetails {
-    text-align: left;
-}
+    .authorPhoto {
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        object-fit: cover;
+        border: 2px solid #ddd;
+    }
 
-.authorName {
-    font-weight: bold;
-    color: #333;
-}
+    .authorDetails {
+        text-align: left;
+    }
 
-.authorPosition {
-    font-size: 0.9rem;
-    color: #777;
+    .authorName {
+        font-weight: bold;
+        color: #333;
+    }
+
+    .authorPosition {
+        font-size: 0.9rem;
+        color: #777;
+    }
 }
 </style>

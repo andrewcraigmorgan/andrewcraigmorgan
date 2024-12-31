@@ -15,7 +15,7 @@
                 </div>
             </div>
         </div>
-        <div class="largeImage">
+        <div class="largeImage portfolioItem">
             <div class="portfolioImage">
                 <picture>
                     <source :srcset="rightPortfolio.imageLarge" media="(min-width: 1200px)" />
@@ -34,25 +34,25 @@
 <script setup>
 const leftPortfolio = [
     {
-        imageSmall: "https://picsum.photos/480/480",
-        imageMedium: "https://picsum.photos/680/700",
-        imageLarge: "https://picsum.photos/1200/1200",
-        title: "Project One",
-        description: "A brief description of project one.",
+        imageSmall: "/portfolio-images/autonomy.png",
+        imageMedium: "/portfolio-images/autonomy.png",
+        imageLarge: "/portfolio-images/autonomy.png",
+        title: "Autonomy",
+        description: "A Laravel and Nuxt based SaaS platform.",
     },
     {
-        imageSmall: "https://picsum.photos/480/480",
-        imageMedium: "https://picsum.photos/680/680",
-        imageLarge: "https://picsum.photos/1200/1200",
+        imageSmall: "/portfolio-images/autonomy.png",
+        imageMedium: "/portfolio-images/autonomy.png",
+        imageLarge: "/portfolio-images/autonomy.png",
         title: "Project Two",
         description: "A brief description of project two.",
     },
 ];
 
 const rightPortfolio = {
-    imageSmall: "https://picsum.photos/480/400",
-    imageMedium: "https://picsum.photos/680/680",
-    imageLarge: "https://picsum.photos/1200/1200",
+    imageSmall: "/portfolio-images/autonomy.png",
+    imageMedium: "/portfolio-images/autonomy.png",
+    imageLarge: "/portfolio-images/autonomy.png",
     title: "Project Three",
     description: "A brief description of project three.",
 };
@@ -71,56 +71,18 @@ const rightPortfolio = {
 
         .portfolioItem {
             flex: 1;
-            position: relative;
-            display: flex;
-            max-height: 50%;
-
-            .portfolioImage {
-                width: 100%;
-                height: 100%;
-                position: relative;
-
-                picture,
-                picture img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-
-            &:hover {
-                .portfolioOverlay {
-                    display: block;
-                }
-            }
-
-            .portfolioOverlay {
-                width: 100%;
-                padding: 20px;
-                background: rgba(0, 0, 0, 0.3);
-                color: #fff;
-                text-align: center;
-                position: absolute;
-                top: 0;
-                bottom: 0;
-                display: none;
-
-                .portfolioTitle {
-                    font-size: 20px;
-                    font-weight: bold;
-                    margin-bottom: 10px;
-                }
-
-                .portfolioDescription {
-                    font-size: 14px;
-                }
-            }
         }
     }
 
     .largeImage {
         flex: 2 1 66%;
         position: relative;
+    }
+
+    .portfolioItem {
+        position: relative;
+        display: flex;
+        max-height: 50%;
 
         .portfolioImage {
             width: 100%;
@@ -137,12 +99,13 @@ const rightPortfolio = {
 
         &:hover {
             .portfolioOverlay {
-                display: block;
+                opacity: 1;
             }
         }
 
         .portfolioOverlay {
             width: 100%;
+            height: 100%;
             padding: 20px;
             background: rgba(0, 0, 0, 0.3);
             color: #fff;
@@ -150,7 +113,11 @@ const rightPortfolio = {
             position: absolute;
             top: 0;
             bottom: 0;
-            display: none;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
 
             .portfolioTitle {
                 font-size: 20px;
