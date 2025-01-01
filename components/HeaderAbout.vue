@@ -19,6 +19,8 @@
 
         @media @mobile {
             width: 100%;
+            max-width: auto;
+            font-size: 30px;
         }
     }
 }
