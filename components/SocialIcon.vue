@@ -30,8 +30,12 @@ const linkedinLink = "https://www.linkedin.com/in/andrew-craig-morgan/";
     justify-content: center;
     margin: 0;
 
-    path {
-        fill: var(--text-color);
+    svg {
+        display: block;
+
+        path {
+            fill: var(--text-color);
+        }
     }
 }
 

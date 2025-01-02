@@ -2,6 +2,7 @@
     <div v-cloak>
         <main>
             <HeaderAbout />
+            <PortfolioHighlights />
             <BrandGrid />
             <Testimonial />
         </main>
