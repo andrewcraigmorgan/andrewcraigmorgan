@@ -56,6 +56,14 @@ const portfolioItems = reactive([
         grid-template-columns: repeat(3, 1fr);
         gap: 20px;
 
+        @media @tablet {
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @media @mobile {
+            display: block;
+        }
+
         .portfolioHighlightsItem {
             margin: 0 0 20px;
 
