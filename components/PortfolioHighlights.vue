@@ -24,7 +24,7 @@ const portfolioItems = reactive([
         image: "/portfolio-highlights/imv.png",
         title: "IMV Imaging",
         technologies: "WordPress, WooCommerce, Vue",
-        description: "A multi language website for a veterinary imaging company.",
+        description: "A multi language, multi region website built with WordPress for a veterinary imaging company.",
     },
     {
         image: "/portfolio-highlights/autonomy.png",
