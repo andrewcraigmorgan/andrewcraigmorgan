@@ -54,7 +54,8 @@ const portfolioItems = reactive([
     .portfolioHighlights {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
-        gap: 20px;
+        gap: 30px;
+        margin-bottom: 30px;
 
         @media @tablet {
             grid-template-columns: repeat(2, 1fr);
@@ -72,14 +73,9 @@ const portfolioItems = reactive([
                 margin-bottom: 10px;
             }
 
-            &__description {
-                margin-bottom: 20px;
-            }
-
             &__image {
                 width: 100%;
-                height: 300px;
-                object-fit: cover;
+                aspect-ratio: 3 / 2;
             }
         }
     }

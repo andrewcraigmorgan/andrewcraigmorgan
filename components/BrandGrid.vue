@@ -24,7 +24,7 @@ const brands = [
 <style lang="less">
 .brandsGridWrapper {
     background: #f9f9f9;
-    padding: 100px 0;
+    padding: 40px 0;
 
     .brandsGrid {
         .wrapper;
