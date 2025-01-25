@@ -1,3 +1,3 @@
-# My portfolio site
+# Portfolio site
 
-My first Nuxt project! Worked on them but never started one from scratch so using this to learn basics of Nuxt.
+A Nuxt.js site that has some work samples and contact details.
