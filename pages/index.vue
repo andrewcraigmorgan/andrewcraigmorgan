@@ -10,8 +10,6 @@
 </template>
 
 <script setup>
-import SocialIcon from "@/components/SocialIcon.vue";
-
 useHead({
     title: "Andrew Morgan - PHP and JavaScript Developer based in Dundee, Scotland",
     meta: [
