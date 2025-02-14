@@ -27,12 +27,10 @@ const testimonial = {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 10px;
     padding: 100px 50px;
     width: 100%;
     margin: 0 auto;
     text-align: center;
-    background: #f5f5f5;
 
     .testimonialContent {
         display: flex;
@@ -44,7 +42,6 @@ const testimonial = {
 
     .testimonialText {
         font-size: 27px;
-        color: #333;
         font-style: italic;
         margin: 0;
 
@@ -73,12 +70,10 @@ const testimonial = {
 
     .authorName {
         font-weight: bold;
-        color: #333;
     }
 
     .authorPosition {
         font-size: 0.9rem;
-        color: #777;
     }
 }
 </style>

@@ -76,6 +76,7 @@ const portfolioItems = reactive([
             &__image {
                 width: 100%;
                 aspect-ratio: 3 / 2;
+                border: 1px solid #f1f1f1;
             }
         }
     }

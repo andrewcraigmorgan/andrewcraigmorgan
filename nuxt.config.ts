@@ -43,6 +43,7 @@ export default defineNuxtConfig({
         baseURL: "/",
     },
     vite: {
+        plugins: [require("vite-svg-loader")()],
         css: {
             preprocessorOptions: {
                 less: {

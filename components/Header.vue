@@ -7,7 +7,10 @@
                         <a href="#">Andrew Morgan</a>
                     </div>
 
-                    <SocialIcon />
+                    <div class="headerNav">
+                        <SocialIcon />
+                        <DarkModeToggle />
+                    </div>
                 </div>
             </div>
         </div>
@@ -23,6 +26,11 @@
             align-items: center;
             justify-content: space-between;
         }
+    }
+
+    .headerNav {
+        display: flex;
+        gap: 20px;
     }
 
     .logo {

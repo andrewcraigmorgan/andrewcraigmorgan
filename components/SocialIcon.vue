@@ -34,7 +34,7 @@ const linkedinLink = "https://www.linkedin.com/in/andrew-craig-morgan/";
         display: block;
 
         path {
-            fill: var(--text-color);
+            fill: var(--textColour);
         }
     }
 }

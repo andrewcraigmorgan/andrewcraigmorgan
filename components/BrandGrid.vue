@@ -2,28 +2,36 @@
     <div class="brandsGridWrapper">
         <div class="brandsGrid">
             <div class="brandItem" v-for="(brand, index) in brands" :key="index">
-                <img :src="brand.logo" :alt="brand.name" />
+                <component :is="brand.logo" class="brandIcon" :alt="brand.name" />
             </div>
         </div>
     </div>
 </template>
 
 <script setup>
+import PhpIcon from '@/assets/brand-images/php.svg';
+import JavascriptIcon from '@/assets/brand-images/js.svg';
+import VueIcon from '@/assets/brand-images/vue.svg';
+import NuxtIcon from '@/assets/brand-images/nuxt.svg';
+import ReactIcon from '@/assets/brand-images/react.svg';
+import WordpressIcon from '@/assets/brand-images/wordpress.svg';
+import LaravelIcon from '@/assets/brand-images/laravel.svg';
+import NextIcon from '@/assets/brand-images/nextjs.svg';
+
 const brands = [
-    { logo: "/brand-images/php.svg", name: "PHP" },
-    { logo: "/brand-images/javascript.svg", name: "JavaScript" },
-    { logo: "/brand-images/vue.svg", name: "Vue" },
-    { logo: "/brand-images/nuxt.svg", name: "Nuxt" },
-    { logo: "/brand-images/react.svg", name: "React" },
-    { logo: "/brand-images/wordpress.svg", name: "WordPress" },
-    { logo: "/brand-images/laravel.svg", name: "Laravel" },
-    { logo: "/brand-images/next.svg", name: "Next.js" },
+    { logo: PhpIcon, name: "PHP" },
+    { logo: JavascriptIcon, name: "JavaScript" },
+    { logo: VueIcon, name: "Vue" },
+    { logo: NuxtIcon, name: "Nuxt" },
+    { logo: ReactIcon, name: "React" },
+    { logo: WordpressIcon, name: "WordPress" },
+    { logo: LaravelIcon, name: "Laravel" },
+    { logo: NextIcon, name: "Next.js" },
 ];
 </script>
 
 <style lang="less">
 .brandsGridWrapper {
-    background: #f9f9f9;
     padding: 40px 0;
 
     .brandsGrid {
@@ -37,9 +45,10 @@ const brands = [
             justify-content: center;
             align-items: center;
 
-            img {
-                max-width: 100px;
-                max-height: 100%;
+            .brandIcon {
+                width: 100px;
+                height: auto;
+                fill: #333;
             }
         }
     }
@@ -50,11 +59,17 @@ const brands = [
             gap: 20px;
 
             .brandItem {
-                img {
-                    max-width: 60px;
-                    max-height: 60px;
+                .brandIcon {
+                    width: 60px;
+                    height: auto;
                 }
             }
+        }
+    }
+
+    @media (prefers-color-scheme: dark) {
+        .brandIcon {
+            fill: #fff;
         }
     }
 }
