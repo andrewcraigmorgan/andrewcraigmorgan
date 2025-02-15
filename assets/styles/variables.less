@@ -29,7 +29,7 @@
 
     // Borders
     --borderRadius: 5px;
-    --borderColour: #2f353f;
+    --borderColour: @primaryColour;
 
     --backgroundColor: #f5f5f5;
 
@@ -43,26 +43,35 @@
     --errorColour: @errorColour;
 
     // Typography
-    --textColour: #2f353f;
+    --textColour: @primaryColour;
     --subTextColour: #7a7e84;
     --disabledColour: #acaeb2;
     --lightTextColour: #ffffff;
 }
 
 .dark {
-    --backgroundColor: #000;
+    --backgroundColor: #1a1d23;
 
     // typography
-    --textColour: #ffffff;
-    --subTextColour: #7a7e84;
-    --disabledColour: #acaeb2;
-    --lightTextColour: #000;
+    --textColour: #e0e0e0;
+    --subTextColour: #a3a7b0;
+    --disabledColour: #7a7e84;
+    --lightTextColour: #ffffff;
 
     // layers
-    --layerDarkColour: #ffffff;
-    --layerAccentColour: #21201f;
-    --layerLightColour: #0a0a08;
-    --layerWhiteColour: #000000;
-    --layerOverlayColour: rgba(0, 0, 0, 0.4);
-    --darkSectionBgColour: #3f444a;
+    --layerDarkColour: #2a2e36;
+    --layerAccentColour: #374151;
+    --layerLightColour: #3f444a;
+    --layerWhiteColour: #262a30;
+    --layerOverlayColour: rgba(20, 20, 20, 0.6);
+    --darkSectionBgColour: #24272e;
+
+    // Brand colours (adjusted for dark mode)
+    --primaryColour: #d1d5db;
+    --secondaryColour: #3bb89f;
+    --tertiaryColour: #d43d58;
+    --successColour: #4caf50;
+    --informationColour: #f4b400;
+    --warningColour: #ffa726;
+    --errorColour: #e53935;
 }
