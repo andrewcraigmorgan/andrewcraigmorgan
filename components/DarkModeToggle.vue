@@ -1,30 +1,25 @@
 <script setup>
 import { useState, onMounted } from "#imports";
 
-// Store dark mode state
+// Store dark mode state (default false)
 const isDarkMode = useState("darkMode", () => false);
 
-// Toggle dark mode
+// Apply dark mode when mounted (only on client)
+onMounted(() => {
+    const savedMode = localStorage.getItem("darkMode");
+    const prefersDark = window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+    isDarkMode.value = savedMode ? savedMode === "enabled" : prefersDark;
+
+    document.documentElement.classList.toggle("dark", isDarkMode.value);
+});
+
+// Toggle function
 const toggleDarkMode = () => {
     isDarkMode.value = !isDarkMode.value;
     document.documentElement.classList.toggle("dark", isDarkMode.value);
     localStorage.setItem("darkMode", isDarkMode.value ? "enabled" : "disabled");
 };
-
-// Detect system preference and stored user preference
-onMounted(() => {
-    const savedMode = localStorage.getItem("darkMode");
-
-    if (savedMode) {
-        isDarkMode.value = savedMode === "enabled";
-    } else {
-        // Use system preference if no saved preference
-        isDarkMode.value = window.matchMedia("(prefers-color-scheme: dark)").matches;
-    }
-
-    // Apply the class
-    document.documentElement.classList.toggle("dark", isDarkMode.value);
-});
 </script>
 
 <template>
