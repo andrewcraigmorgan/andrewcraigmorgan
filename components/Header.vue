@@ -23,14 +23,26 @@
         .headerIntro {
             .wrapper;
             display: flex;
-            align-items: center;
-            justify-content: space-between;
+
+            @media @tablet, @desktop {
+                justify-content: space-between;
+            }
+
+            @media @mobile {
+                flex-direction: column-reverse;
+            }
         }
     }
 
     .headerNav {
         display: flex;
         gap: 20px;
+
+        @media @mobile {
+            width: 100%;
+            margin: 10px 0;
+            justify-content: space-between;
+        }
     }
 
     .logo {
