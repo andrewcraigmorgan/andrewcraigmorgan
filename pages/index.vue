@@ -5,6 +5,7 @@
             <PortfolioHighlights />
             <BrandGrid />
             <Testimonial />
+            <ExperienceSection />
         </main>
     </div>
 </template>
