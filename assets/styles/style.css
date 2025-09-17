@@ -9,9 +9,9 @@ body {
     background-color: var(--backgroundColor);
     font-family: var(--bodyFont);
     color: var(--textColour);
+    transition: background-color 0.3s ease, color 0.3s ease;
     font-size: 1rem; /* 16px */
     line-height: 1.6; /* 26px */
-    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 h1 {
@@ -42,9 +42,4 @@ h5 {
 h6 {
     font-size: 1rem; /* 16px */
     line-height: 1.5rem; /* 24px */
-}
-
-body {
-    font-size: 1rem; /* 16px */
-    line-height: 1.6; /* 26px */
 }
