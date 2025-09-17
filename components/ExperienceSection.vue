@@ -25,7 +25,6 @@
                     <li>Key client point of contact across diverse sectors</li>
                     <li>Championed internal development practices and tooling</li>
                     <li>Recruited, mentored, and trained developers</li>
-                    <li>Led redevelopment of the company website</li>
                 </ul>
             </li>
 
