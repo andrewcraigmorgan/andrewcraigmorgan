@@ -16,7 +16,12 @@
         <ul class="experience__list" role="list">
             <li class="experience__item">
                 <div class="experience__item-head">
-                    <h3 class="experience__role">Lead Developer — Mtc Media</h3>
+                    <h3 class="experience__role">
+                        Lead Developer —
+                        <a href="https://www.mtc.co.uk" target="_blank" rel="noopener" class="experience__company">
+                            Mtc Media
+                        </a>
+                    </h3>
                     <span class="experience__dates">October 2011 – Present</span>
                 </div>
                 <ul class="experience__bullets" role="list">
@@ -81,7 +86,6 @@ const props = defineProps({
     max-width: 1100px;
     margin: 0 auto;
     padding: 40px 20px;
-    color: var(--lightTextColour);
 
     &__header {
         display: flex;
@@ -106,7 +110,6 @@ const props = defineProps({
         border: 1px solid rgba(255,255,255,0.25);
         border-radius: 8px;
         transition: background 0.2s ease, border-color 0.2s ease;
-        color: inherit;
 
         &:hover {
             background: rgba(255,255,255,0.06);
@@ -141,6 +144,16 @@ const props = defineProps({
     &__role {
         font-size: 18px;
         margin: 0;
+
+        a.experience__company {
+            color: inherit;
+            text-decoration: underline;
+            text-underline-offset: 3px;
+
+            &:hover {
+                opacity: 0.85;
+            }
+        }
     }
 
     &__dates {
