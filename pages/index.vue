@@ -5,7 +5,7 @@
             <PortfolioHighlights />
             <BrandGrid />
             <Testimonial />
-            <ExperienceSection />
+            <ExperienceSection cvUrl="/Andrew%20Morgan%20-%20CV.pdf" />
         </main>
     </div>
 </template>
