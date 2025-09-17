@@ -102,18 +102,47 @@ const props = defineProps({
         letter-spacing: 0.3px;
     }
 
+
     &__cv-link {
         display: inline-block;
         font-size: 14px;
+        font-weight: 600;
         text-decoration: none;
-        padding: 8px 12px;
-        border: 1px solid rgba(255,255,255,0.25);
-        border-radius: 8px;
-        transition: background 0.2s ease, border-color 0.2s ease;
+        padding: 10px 16px;
+        border-radius: var(--borderRadius);
+        color: var(--primaryColour);
+        background: var(--layerWhiteColour, rgba(0,0,0,0.04));
+        border: 1px solid rgba(0,0,0,0.18);
+        transition: background 0.2s ease, border-color 0.2s ease, transform 0.1s ease, box-shadow 0.2s ease;
+
+        /* Modern browsers: derive subtle tints from the text color */
+        @supports (color: color-mix(in oklab, white, black)) {
+            background: color-mix(in oklab, currentColor 8%, transparent);
+            border-color: color-mix(in oklab, currentColor 22%, transparent);
+
+            &:hover {
+                background: color-mix(in oklab, currentColor 14%, transparent);
+                border-color: color-mix(in oklab, currentColor 34%, transparent);
+            }
+            &:active {
+                background: color-mix(in oklab, currentColor 22%, transparent);
+                transform: scale(0.98);
+            }
+        }
 
         &:hover {
-            background: rgba(255,255,255,0.06);
-            border-color: rgba(255,255,255,0.45);
+            background: var(--layerLightColour, rgba(0,0,0,0.07));
+            border-color: rgba(0,0,0,0.30);
+        }
+
+        &:active {
+            transform: scale(0.98);
+            background: var(--layerAccentColour, rgba(0,0,0,0.10));
+        }
+
+        &:focus-visible {
+            outline: none;
+            box-shadow: 0 0 0 3px fade(@secondaryColour, 45%);
         }
     }
 
@@ -205,6 +234,40 @@ const props = defineProps({
 
             &:hover {
                 opacity: 0.85;
+            }
+        }
+    }
+
+    .dark {
+        .experience__cv-link {
+            color: var(--primaryColour);
+            background: var(--layerWhiteColour, rgba(255,255,255,0.06));
+            border-color: rgba(255,255,255,0.28);
+
+            &:hover {
+                background: var(--layerLightColour, rgba(255,255,255,0.12));
+                border-color: rgba(255,255,255,0.45);
+            }
+            &:active {
+                background: var(--layerAccentColour, rgba(255,255,255,0.20));
+            }
+
+            @supports (color: color-mix(in oklab, white, black)) {
+                /* These override the fallbacks above in dark mode */
+                background: color-mix(in oklab, currentColor 10%, transparent);
+                border-color: color-mix(in oklab, currentColor 26%, transparent);
+
+                &:hover {
+                    background: color-mix(in oklab, currentColor 16%, transparent);
+                    border-color: color-mix(in oklab, currentColor 38%, transparent);
+                }
+                &:active {
+                    background: color-mix(in oklab, currentColor 24%, transparent);
+                }
+            }
+
+            &:focus-visible {
+                box-shadow: 0 0 0 3px fade(@secondaryColour, 55%);
             }
         }
     }
