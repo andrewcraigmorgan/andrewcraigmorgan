@@ -9,7 +9,9 @@
         "preview": "nuxt preview",
         "postinstall": "nuxt prepare",
         "deploy": "nuxt generate",
-        "docs": "node scripts/gen-docs.mjs"
+        "docs": "node scripts/gen-docs.mjs",
+        "lint": "eslint . --ext .js,.ts,.vue",
+        "lint:fix": "eslint . --ext .js,.ts,.vue --fix"
     },
     "dependencies": {
         "@nuxtjs/google-fonts": "^3.2.0",
@@ -23,8 +25,18 @@
         "vue-router": "latest"
     },
     "devDependencies": {
+        "@eslint/js": "^9.36.0",
         "@nuxt/content": "^3.7.1",
+        "@typescript-eslint/eslint-plugin": "^8.44.1",
+        "@typescript-eslint/parser": "^8.44.1",
+        "eslint": "^9.36.0",
+        "eslint-config-prettier": "^10.1.8",
+        "eslint-plugin-nuxt": "^4.0.0",
+        "eslint-plugin-vue": "^10.5.0",
+        "globals": "^16.4.0",
         "less": "^4.2.1",
+        "prettier": "^3.6.2",
+        "typescript-eslint": "^8.44.1",
         "vite-svg-loader": "^5.1.0"
     }
 }

@@ -18,10 +18,10 @@ const toggleDarkMode = () => {
 </script>
 
 <template>
-  <button @click="toggleDarkMode" :class="{ 'dark-mode': isDarkMode }">
-    <span v-if="isDarkMode">☀️</span>
-    <span v-else>🌙</span>
-  </button>
+    <button @click="toggleDarkMode" :class="{ 'dark-mode': isDarkMode }">
+        <span v-if="isDarkMode">☀️</span>
+        <span v-else>🌙</span>
+    </button>
 </template>
 
 <style scoped lang="less">

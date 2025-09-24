@@ -77,7 +77,7 @@ const handleFormSubmission = async () => {
     }
 
     try {
-        const { data, error } = await useFetch("/api/send-email", {
+        const { error } = await useFetch("/api/send-email", {
             method: "POST",
             body: form.value,
         })

@@ -1,20 +1,20 @@
 <template>
-  <header>
-    <div class="headerWrap">
-      <div class="headerIntroWrap">
-        <div class="headerIntro">
-          <div class="logo">
-            <a href="#">Andrew Morgan</a>
-          </div>
+    <header>
+        <div class="headerWrap">
+            <div class="headerIntroWrap">
+                <div class="headerIntro">
+                    <div class="logo">
+                        <a href="#">Andrew Morgan</a>
+                    </div>
 
-          <div class="headerNav">
-            <SocialIcon />
-            <DarkModeToggle />
-          </div>
+                    <div class="headerNav">
+                        <SocialIcon />
+                        <DarkModeToggle />
+                    </div>
+                </div>
+            </div>
         </div>
-      </div>
-    </div>
-  </header>
+    </header>
 </template>
 
 <style lang="less">
