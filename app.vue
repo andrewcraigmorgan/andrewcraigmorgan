@@ -1,5 +1,5 @@
 <script setup>
-import { useHead } from "#imports";
+import { useHead } from "#imports"
 
 // Immediate dark mode fix (prevents flash of wrong color)
 useHead({
@@ -17,16 +17,15 @@ useHead({
                 })();
             `
         }
+    ],
+    link: [
+        {
+            rel: "manifest",
+            href: "/site.webmanifest.json"
+        }
+    ],
+    meta: [
+        { name: "theme-color", content: "#ffffff" }
     ]
-});
+})
 </script>
-
-<template>
-    <div>
-        <Header />
-        <main>
-            <NuxtPage />
-        </main>
-        <footer></footer>
-    </div>
-</template>

@@ -1,12 +1,12 @@
 # Portfolio site
 
-A Nuxt.js site that has some work samples and contact details.
+My portfolio site for "Andrew Morgan | PHP and JavaScript developer", features work samples and contact details.
+
 ## Features
 
 - Built with [Nuxt.js](https://nuxt.com/)
 - Responsive design for mobile and desktop
 - Showcases work samples and projects
-- Contact form for inquiries
 
 ## Getting Started
 
