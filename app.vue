@@ -3,6 +3,11 @@ import { useHead } from "#imports"
 
 // Immediate dark mode fix (prevents flash of wrong color)
 useHead({
+    app: {
+        head: {
+            link: [] // prevents Nuxt from injecting /manifest.json automatically
+        }
+    },
     script: [
         {
             children: `
@@ -21,7 +26,7 @@ useHead({
     link: [
         {
             rel: "manifest",
-            href: "/site.webmanifest.json"
+            href: "/manifest.json"
         }
     ],
     meta: [
